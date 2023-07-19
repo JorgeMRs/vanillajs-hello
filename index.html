@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="JavaScript.js">
+    <script src="JavaScript.js"></script>
 </head>
 <body>
 
@@ -24,12 +24,9 @@
             <li class="r">
                 <a href="#">Idioma</a>
                 <ul class="lista-vertical">
-                   <li><a href="#">Español</a></li>
-                   <li><a href="#">Ingles</a></li>
-                   <li><a href="#">Portugués</a></li>
-                   <li><a href="#">Japones</a></li>
-                   <li><a href="#">Aleman</a></li>
-    
+                   <li id="es" value="Español" onclick="es()"><a href="#">Español</a></li>
+                   <li id="en" value="Ingles" onclick="en()"><a  href="#">Ingles</a></li>
+                  
                 </ul> 
             </li>
     
@@ -47,9 +44,9 @@
 
     <p class="title">OMG! you will not belive me but...</p>
 
-    <p class="escusa">el perro se comio mi mochila</p>
+    <p  id="escus" class="escusa"></p>
 
-    <button  id="boton" name="button" value="Calcular" onclick="idioma()">generate</button>
+    <button  id="boton" name="button" value="Español" onclick="render()">generate</button>
 
 
     

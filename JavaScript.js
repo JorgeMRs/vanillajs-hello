@@ -1,4 +1,4 @@
-
+console.log ("hola uwu")
 // español
 let who1 = ['El perro', 'Mi abuela', 'Su tortuga', 'Mi pájaro'];
 let action1 = ['comió', 'meó', 'aplastó', 'rompió'];
@@ -11,36 +11,114 @@ let action2 = ['ate', 'peed', 'crushed', 'broke'];
 let what2 = ['my homework', 'the keys', 'the car'];
 let when2 = ['before the class', 'right on time', 'when I finished', 'during my lunch', 'while I was praying'];
 
-//portuguez
-let who3 = ['O cachorro', 'Minha avó', 'Sua tartaruga', 'Meu pássaro'];
-let action3 = ['comeu', 'fez xixi', 'esmagou', 'quebrou'];
-let what3 = ['meu dever de casa', 'as chaves', 'o carro'];
-let when3 = ['antes da aula', 'bem na hora', 'quando terminei', 'durante meu almoço', 'enquanto eu estava orando'];
+//Objetos
+const lengujues = {
 
-//japones
-let who4 = ['inu','watashi no sobo','kare no kame','watashi no tori'];
-let action4 = [' tabeta',' oshikko shita',' oshitsubusa reta',' kowareta']; 
-let what4 = ['watashi no shukudai','kagi','-sha']; 
-let when4 = ['jugyō no mae ni','jikandōrini','jugyo ga owatta toki','chūshoku-chū','inotte iru ma'];
+    Ingles:{
+        
+        action :['ate', 'peed', 'crushed', 'broke'],
+        what   :['my homework', 'the keys', 'the car'],
+        when   :['before the class', 'right on time', 'when I finished', 'during my lunch', 'while I was praying'],
 
-//aleman
-let who5 = ['Der Hund', 'Meine Oma', 'Seine Schildkröte', 'Mein Vogel'];
-let action5 = ['ate', 'pinkel', 'crushed', 'broke'];
-let what5 = ['meine Hausaufgaben', 'die Schlüssel', 'das Auto'];
-let when5 = ['vor dem Unterricht', 'pünktlich', 'als ich fertig war', 'während meines Mittagessens', 'während ich betete'];
+    },
 
+    Español:{
+        
+        quien  :['El perro', 'Mi abuela', 'Su tortuga', 'Mi pájaro'],
+        accion :['comió', 'meó', 'aplastó', 'rompió'],
+        que    :['mi tarea', 'las llaves', 'el carro'],
+        cuando :['antes de la clase', 'justo a tiempo', 'cuando terminé', 'durante mi almuerzo', 'mientras oraba']
+    }
+
+}
+
+const Pagina_español = document.getElementById("es")
+//Funcion para vambiar el valor del value del boton "boton" a "Español"
+function es(){
+
+    let valor = document.getElementById("boton")
+    valor.value = "Español"
+    console.log("Español")
+
+}
+
+
+const Pagina_Ingles = document.getElementById("en")
+//Funcion para vambiar el valor del value del boton "boton" a "Ingles"
+function en(){
+
+    let valor = document.getElementById("boton")
+    valor.value = "Ingles"
+    console.log("Ingles")
+    let titulo = document.g
+
+    
+
+}
 
 
 
 //logica
-let idioma = 0
+function cambiar (){
 
-if (condition) {
+    const butom_idioma = document.getElementById ("boton")
+    console.log(butom_idioma.value)
+    if (butom_idioma.value==="Ingles") {
+        console.log("es inglesh")
 
-    idioma = 1 
+        let whonr    = Math.floor(Math.random()*(4 - 0 )+ 0);
+        let actionnr = Math.floor(Math.random()*(4 - 0 )+ 0);
+        let whatnr   = Math.floor(Math.random()*(3 - 0 )+ 0);
+        let whennr   = Math.floor(Math.random()*(5 - 0 )+ 0);
+
+        let escusa =  lengujues.Ingles.who[whonr] + " " + lengujues.Ingles.action[actionnr] + " " + lengujues.Ingles.what[whatnr] + " " + lengujues.Ingles.when[whennr]  
+        console.log(escusa)
+        console.log(whonr)
+        return escusa;
+
+    } else if(butom_idioma.value==="Español"){
+        console.log("es españolsh")
+
+
+        let quiennr  = Math.floor(Math.random()*(4 - 0 )+ 0);
+        let accionnr = Math.floor(Math.random()*(4 - 0 )+ 0);
+        let quenr    = Math.floor(Math.random()*(3 - 0 )+ 0);
+        let cuandonr = Math.floor(Math.random()*(5 - 0 )+ 0);
+
+        let escusa =  lengujues.Español.quien[quiennr] + " " + lengujues.Español.accion[accionnr] + " " + lengujues.Español.que[quenr] + " " + lengujues.Español.cuando[cuandonr]   
+        console.log(escusa)
+        console.log(quiennr)
+        return escusa;
+    }
 
     
 }
+
+
+
+
+
+const boton = document.getElementById("boton")
+
+function render (){
+    console.log ("este sech")
+    const resultado = cambiar()
+    
+    const parrafo_resultado = document.getElementById("escus")
+    
+    return document.getElementById("escus").innerHTML = resultado;
+    
+        
+    
+    
+}
+
+
+
+
+
+    
+
 
 
 
